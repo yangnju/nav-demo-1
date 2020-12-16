@@ -1,0 +1,155 @@
+/* css reset */
+* {
+  box-sizing: border-box;
+}
+*::before *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* sytle */
+.globalHeader {
+  margin: 90px 26px 90px 26px;
+}
+.globalMain {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.searchForm {
+  display: flex;
+  justify-content: space-between; /* 均匀排列每个元素
+  首个元素放置于起点，末尾元素放置于终点 */
+}
+@media (min-width: 500px) {
+  /*当满足最小宽度大于500px时(500是个经验数字）*/
+  .searchForm {
+    max-width: 500px;
+    margin-left: auto; /*当宽度固定或有最大宽度时，可以用这种方式让元素居中*/
+    margin-right: auto;
+  }
+}
+.searchForm > input {
+  height: 40px;
+  width: 100%;
+  border: none; /* 习惯：需要先去掉默认样式 */
+  margin-right: 16px;
+  padding: 0px 10px;
+  background: #f4f4f4;
+  border-radius: 6px;
+}
+.searchForm > button {
+  white-space: nowrap; /*连续的空白符会被合并,但文本内的换行无效。*/
+  border: none; /* 习惯：需要先去掉默认样式 */
+  padding: 0 25px;
+  background: #f4f4f4;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #5a5a5a;
+}
+.siteList {
+  display: flex;
+  flex-wrap: wrap; /* 宽度不够时折行 */
+  margin: 0 26px;
+  justify-content: space-between;
+}
+@media (min-width: 500px) {
+  .siteList {
+    margin-left: 0;
+    margin-right: -25px; /*负margin居中法*/
+    justify-content: flex-start;
+  }
+}
+.siteList > li {
+  margin-bottom: 20px;
+}
+@media (min-width: 500px) {
+  .siteList > li {
+    margin-left: 0;
+    margin-right: 25px;
+  }
+}
+.siteList .site {
+  background-color: #f4f4f4;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* 竖着排列 */
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+}
+.siteList .site > .logo {
+  width: 74px;
+  height: 74px;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+  text-transform: uppercase;
+}
+.siteList .site > .link {
+  font-size: 17px;
+}
+.siteList .site > .closeWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.siteList .site .icon {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+.siteList .site:hover .icon {
+  display: block;
+}
+
+.siteList .last .addSite {
+  width: 150px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* 竖着排列 */
+  border-radius: 6px;
+  background-color: #f4f4f4;
+}
+.siteList .addSite .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.siteList .addSite .icon {
+  width: 74px;
+  height: 74px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.siteList .addSite .text {
+  font-size: 17px;
+}
+
+
+/*# sourceMappingURL=style.db1864e5.css.map */
